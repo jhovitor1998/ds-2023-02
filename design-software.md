@@ -7,8 +7,9 @@ O termo "software design" esta diretamente ligado ao processo de planejamento e 
 como eles se relacionarão entre si e como o sistema como um todo atenderá aos requisitos e objetivos estabelecidos.
 
 ## Quais são as atividades necessárias para projetar um software?
-
-
+Projetar um software envolve uma série de atividades e etapas para garantir que o sistema atenda aos requisitos do usuário, seja eficiente, escalável e mantenível. 
+As atividades necessárias para projetar um software podem variar dependendo do tamanho e da complexidade do projeto, mas aqui estão as atividades típicas envolvidas no processo de design de software:
 
 
 ## Você tinha conhecimento destas atividades e os entregáveis correspondentes? (sim/não)
+Não.
