@@ -16,7 +16,18 @@ Primeiramente, devemos receber o arquivo CSV como entrada, para depois realizarm
 
 ### 2 - Leitura de Dados:
 - O Software deve abrir o arquivo CVS de entrada.
-- Ler o conteudo do arquivo CVS de entrada e para cada linha do arquivo deve:
-                     - Dividir o conteudo de cada linha em colunas
-                     - Extrair os valores das duas primeiras colunas.
-                     - Realizar a soma desses valores extraidos.   
+- Ler o conteudo do arquivo CVS de entrada e para cada linha do arquivo deve dividir o conteudo de cada linha em colunas, extrair os valores das duas primeiras colunas e realizar a soma desses valores extraidos.
+
+### 3 - Saída:
+- O software deve criar um novo arquivo CSV de saída.
+- Este arquivo CSV de saíde deve conter todas as linhas e colunas do CSV de entrada, porem com uma coluna adiconal que apresente o resultado de cada soma realizada.
+- O Software deve apresentar uma mensagem avisando quando o arquivo CVS de saída for gerado.
+
+### Manipulação de Erros:
+*É importante realizar o tratamento dos seguintes erros:*
+- Arquivo de entrada não encontrado.
+- Erros na formatação do arquivo CSV.
+- Problemas durante a escrita do arquivo de saída.
+
+  ### Teste:
+  - O software deve ser testado com diversos arquivos de entrada para garantir que os calculos e a geração de um novo arquivo de saída estejam corretos.
