@@ -1,1 +1,42 @@
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class CalculadoraRaizQuadrada {
+    public static double calcularRaizQuadrada(double num, double epsilon) {
+        if (num < 0) {
+            throw new IllegalArgumentException("Número não pode ser negativo");
+        }
+
+        double estimativa = num / 2.0;
+        while (Math.abs(estimativa * estimativa - num) > epsilon) {
+            estimativa = 0.5 * (estimativa + num / estimativa);
+        }
+        return estimativa;
+    }
+
+public class TesteCalculadoraRaizQuadrada {
+
+    @Test
+    public void testCalcularRaizQuadrada() {
+        assertEquals(0.0, CalculadoraRaizQuadrada.calcularRaizQuadrada(0, 0.001), 0.001);
+        assertEquals(1.0, CalculadoraRaizQuadrada.calcularRaizQuadrada(1, 0.001), 0.001);
+        assertEquals(2.0, CalculadoraRaizQuadrada.calcularRaizQuadrada(4, 0.001), 0.001);
+        assertEquals(3.0, CalculadoraRaizQuadrada.calcularRaizQuadrada(9, 0.001), 0.001);
+        assertEquals(4.0, CalculadoraRaizQuadrada.calcularRaizQuadrada(16, 0.001), 0.001);
+        assertEquals(5.0, CalculadoraRaizQuadrada.calcularRaizQuadrada(25, 0.001), 0.001);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testNumeroNegativo() {
+        CalculadoraRaizQuadrada.calcularRaizQuadrada(-1, 0.001);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testEpsilonNegativo() {
+        CalculadoraRaizQuadrada.calcularRaizQuadrada(9, -0.001);
+    }
+}
+
+}
+
 
