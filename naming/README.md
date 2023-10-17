@@ -1,1 +1,1 @@
-#“Nomeação de classes, variáveis, …”
+# Nomeação de classes
